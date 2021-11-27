@@ -104,10 +104,13 @@
           font-weight: normal;
           font-size: 18px;
           line-height: 37px;
+          position: relative;
+          z-index: 2;
           &:not(:last-child) {
             margin-bottom: 15px;
           }
           .menu-link {
+            width: fit-content;
             font-style: normal;
             font-weight: normal;
             font-size: 18px;
@@ -115,7 +118,26 @@
             color: var(--white-color);
             position: relative;
             transition: all 0.7s;
+            position: relative;
+            z-index: 2;
+            &::after {
+              content: '';
+              position: absolute;
+              width: 58px;
+              height: 58px;
+              background-image: url(../img/icon-ellipse__mob.svg);
+              background-position: center;
+              background-size: contain;
+              transform: translate(-50%, -50%);
+              top: 50%;
+              left: 50%;
+              transition: all 0.7s;
+              opacity: 0;
+            }
             &.active {
+              &::after {
+                opacity: 1;
+              }
             }
           }
         }
@@ -123,6 +145,80 @@
     }
     .header-menu.active {
       right: 0;
+    }
+  }
+  &__desktop {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    &__mob {
+      .header-menu {
+        &::after {
+          top: 5%;
+          right: -14%;
+        }
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    &__mob {
+      display: none;
+    }
+    &__desktop {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 25px 0 0px;
+      .logo {
+        margin-bottom: 34px;
+        &-title {
+          font-family: 'Cormorant';
+          font-style: normal;
+          font-weight: normal;
+          font-size: 40px;
+          line-height: 48px;
+        }
+      }
+      .header-menu {
+        .menu-list {
+          display: flex;
+          &__item {
+            margin: 0 23px;
+            position: relative;
+            z-index: 2;
+            cursor: pointer;
+            .menu-link {
+              font-style: normal;
+              font-weight: 300;
+              font-size: 18px;
+              line-height: 27px;
+              text-align: center;
+              position: relative;
+              z-index: 2;
+              &::after {
+                content: '';
+                position: absolute;
+                width: 58px;
+                height: 58px;
+                background-image: url(../img/icon-ellipse__desktop.svg);
+                background-position: center;
+                background-size: contain;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                transition: all 0.7s;
+                opacity: 0;
+              }
+              &.active {
+                &::after {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
