@@ -19,6 +19,7 @@
         line-height: 29px;
       }
     }
+
     .header-burger {
       display: flex;
       margin-left: auto;
@@ -150,6 +151,7 @@
   &__desktop {
     display: none;
   }
+
   @media (min-width: 768px) {
     &__mob {
       .header-menu {
