@@ -554,7 +554,7 @@
 .course {
   padding: 38px 0 22px;
   position: relative;
-  z-index: 2;
+  z-index: 10;
   &::after {
     content: '';
     position: absolute;
@@ -568,7 +568,7 @@
   }
   &-wrapper {
     position: relative;
-    z-index: 2;
+    z-index: 5;
     .img-wrapper {
       margin-bottom: 20px;
       width: 100%;
@@ -693,6 +693,8 @@
           }
         }
         .price-wrapper {
+          position: relative;
+          z-index: 5;
           .price-inner {
             display: flex;
             padding-bottom: 11px;
@@ -730,10 +732,12 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            z-index: 2;
+            z-index: 10;
             border-radius: 250px/50px;
             transition: all 0.7s;
-            // background-color: wheat;
+            background-color: transparent;
+            outline: none;
+            border: none;
             &::after {
               content: '';
               position: absolute;
@@ -970,6 +974,8 @@
 
 .master-class {
   padding: 25px 0 84px;
+  position: relative;
+  z-index: 5;
   &__wrapper {
     .master-class__item {
       margin-bottom: 57px;
@@ -1093,6 +1099,9 @@
             border-radius: 250px/50px;
             transition: all 0.7s;
             // background-color: wheat;
+            background-color: transparent;
+            outline: none;
+            border: none;
             &::after {
               content: '';
               position: absolute;
@@ -1167,7 +1176,7 @@
           transform: rotate(125.32deg);
           top: -46%;
           left: -74%;
-          z-index: 1;
+          z-index: -1;
         }
         &::after {
           content: '';
