@@ -20,4 +20,13 @@ $(function () {
     $('.menu-link').removeClass('active')
     $(this).toggleClass('active')
   })
+
+  $('.nav-list__item .nav-list__link').on('click', function () {
+    $('.nav-list__link').removeClass('active')
+    $(this).addClass('active')
+  })
+  $('.nav-list__item .nav-list__link').hover(function () {
+    $('.nav-list__link').removeClass('active')
+    $(this).toggleClass('active')
+  })
 })
