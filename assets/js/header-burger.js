@@ -11,22 +11,32 @@ $(function () {
     $('.header-burger,.header-menu').removeClass('active')
   })
 
-  $('.menu-list__item .menu-link').on('click', function () {
-    $('.menu-link').removeClass('active')
-    $(this).addClass('active')
+  // $('.menu-list__item .menu-link').on('click', function () {
+  //   $('.menu-link').removeClass('active')
+  //   $(this).addClass('active')
+  //   $('.header-burger,.header-menu').toggleClass('active')
+  // })
+  // $('.menu-list__item .menu-link').hover(function () {
+  //   $('.menu-link').removeClass('active')
+  //   $(this).toggleClass('active')
+  // })
+
+  $('.menu-list .menu-list__item').on('click', function () {
+    $('.menu-list__item').removeClass('current_page_item')
+    $(this).addClass('current_page_item')
     $('.header-burger,.header-menu').toggleClass('active')
   })
-  $('.menu-list__item .menu-link').hover(function () {
-    $('.menu-link').removeClass('active')
-    $(this).toggleClass('active')
+  $('.menu-list .menu-list__item').hover(function () {
+    $('.menu-list__item').removeClass('current_page_item')
+    $(this).toggleClass('current_page_item')
   })
 
-  $('.nav-list__item .nav-list__link').on('click', function () {
-    $('.nav-list__link').removeClass('active')
-    $(this).addClass('active')
+  $('.nav-list .nav-list__item').on('click', function () {
+    $('.nav-list__item').removeClass('current_page_item')
+    $(this).addClass('current_page_item')
   })
-  $('.nav-list__item .nav-list__link').hover(function () {
-    $('.nav-list__link').removeClass('active')
-    $(this).toggleClass('active')
+  $('.nav-list .nav-list__item').hover(function () {
+    $('.nav-list__item').removeClass('current_page_item')
+    $(this).toggleClass('current_page_item')
   })
 })
