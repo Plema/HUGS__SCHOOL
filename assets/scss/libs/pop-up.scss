@@ -39,6 +39,7 @@
       filter: blur(67px);
       top: 0;
       right: 0;
+      z-index: 1;
     }
     &.active {
       top: 50%;
@@ -203,6 +204,8 @@
   }
 
   .police__wrapper {
+    position: relative;
+    z-index: 2;
     .custom-checkbox {
       position: absolute;
       z-index: -1;
