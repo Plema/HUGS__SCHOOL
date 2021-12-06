@@ -1,3 +1,18 @@
+.main {
+  .course-link {
+    position: relative;
+    z-index: 10;
+    width: fit-content;
+    height: fit-content;
+    &:hover {
+      .description-title {
+        transition: all 0.7s;
+        color: var(--accent-color);
+      }
+    }
+  }
+}
+
 .main-title {
   position: relative;
   z-index: 30;
@@ -1124,8 +1139,12 @@
 }
 
 .course-second {
-  // padding-bottom: 57px;
+  padding: 75px 0 0;
   &__wrapper {
+    margin-bottom: 50px;
+    &:last-child {
+      margin-bottom: 0;
+    }
     .img-wrapper {
       position: relative;
       z-index: 2;
@@ -1164,6 +1183,18 @@
       position: relative;
       z-index: 4;
       .description__top {
+        .course-link {
+          position: relative;
+          z-index: 10;
+          width: fit-content;
+          height: fit-content;
+          &:hover {
+            .description-title {
+              transition: all 0.7s;
+              color: var(--accent-color);
+            }
+          }
+        }
         .description-title {
           font-style: normal;
           font-weight: bold;
@@ -1336,6 +1367,10 @@
       justify-content: space-between;
       max-width: 900px;
       margin: 0 auto;
+      margin-bottom: 75px;
+      &:last-child {
+        margin-bottom: 0;
+      }
       .img-wrapper {
         width: 49%;
         max-width: 357px;
@@ -1359,11 +1394,24 @@
         }
       }
     }
+    .course-second__wrapper-right {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      .img-wrapper {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
   }
   @media (min-width: 1024px) {
-    padding: 20px 0 73px;
+    padding: 120px 0 73px;
     .course-second__wrapper {
       max-width: 100%;
+      margin-bottom: 100px;
+      &:last-child {
+        margin-bottom: 0;
+      }
       .img-wrapper {
         max-width: 504px;
         max-height: 525px;
@@ -1441,6 +1489,12 @@
             }
           }
         }
+      }
+    }
+    .course-second__wrapper-right {
+      .img-wrapper {
+        margin-left: 0;
+        margin-right: auto;
       }
     }
   }

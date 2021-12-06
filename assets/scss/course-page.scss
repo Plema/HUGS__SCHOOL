@@ -1,0 +1,33 @@
+.course {
+  padding: 0 0 45px;
+  &-wrapper {
+    .title-wrapper {
+      padding-top: 85px;
+      position: relative;
+      z-index: 2;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 331.01px;
+        height: 502.67px;
+
+        background: linear-gradient(203.52deg, #6631b5 16.51%, rgba(110, 36, 221, 0) 65.41%);
+        filter: blur(87px);
+        transform: rotate(-79.31deg);
+        z-index: 1;
+        top: -75%;
+      }
+      .title {
+        font-family: 'Circe';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 37px;
+        text-transform: uppercase;
+        color: #ffffff;
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+}
