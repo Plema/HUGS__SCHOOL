@@ -179,8 +179,23 @@
       }
     }
   }
+  @media (min-width: 768px) {
+    .footer__top {
+      &-inner {
+        .nav-footer {
+          .nav-list {
+            &__item {
+              &::after {
+                left: 7.5%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   @media (min-width: 1024px) {
-    &__top {
+    .footer__top {
       &-inner {
         padding: 23px 0 28px;
         .footer-logo {
