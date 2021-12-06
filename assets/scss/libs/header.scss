@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 5;
+  z-index: 40;
   &__mob {
     width: 100%;
     padding: 30px 0;
@@ -88,6 +88,7 @@
       min-width: 100%;
       transition: all 0.7s ease 0s;
       border-radius: 10px 0 0 10px;
+      // z-index: 100;
       &::after {
         content: '';
         position: absolute;
@@ -110,6 +111,25 @@
           &:not(:last-child) {
             margin-bottom: 15px;
           }
+          &::after {
+            content: '';
+            position: absolute;
+            width: 58px;
+            height: 58px;
+            background-image: url(../img/icon-ellipse__mob.svg);
+            background-position: center;
+            background-size: contain;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            transition: all 0.7s;
+            opacity: 0;
+          }
+          &.current_page_item {
+            &::after {
+              opacity: 1;
+            }
+          }
           .menu-link {
             width: fit-content;
             font-style: normal;
@@ -120,25 +140,6 @@
             transition: all 0.7s;
             position: relative;
             z-index: 2;
-            &::after {
-              content: '';
-              position: absolute;
-              width: 58px;
-              height: 58px;
-              background-image: url(../img/icon-ellipse__mob.svg);
-              background-position: center;
-              background-size: contain;
-              transform: translate(-50%, -50%);
-              top: 50%;
-              left: 50%;
-              transition: all 0.7s;
-              opacity: 0;
-            }
-            &.active {
-              &::after {
-                opacity: 1;
-              }
-            }
           }
         }
       }
@@ -189,6 +190,25 @@
             position: relative;
             z-index: 2;
             cursor: pointer;
+            &::after {
+              content: '';
+              position: absolute;
+              width: 58px;
+              height: 58px;
+              background-image: url(../img/icon-ellipse__desktop.svg);
+              background-position: center;
+              background-size: contain;
+              transform: translate(-50%, -50%);
+              top: 50%;
+              left: 50%;
+              transition: all 0.7s;
+              opacity: 0;
+            }
+            &.current_page_item {
+              &::after {
+                opacity: 1;
+              }
+            }
             .menu-link {
               font-style: normal;
               font-weight: 300;
@@ -197,25 +217,6 @@
               text-align: center;
               position: relative;
               z-index: 2;
-              &::after {
-                content: '';
-                position: absolute;
-                width: 58px;
-                height: 58px;
-                background-image: url(../img/icon-ellipse__desktop.svg);
-                background-position: center;
-                background-size: contain;
-                transform: translate(-50%, -50%);
-                top: 50%;
-                left: 50%;
-                transition: all 0.7s;
-                opacity: 0;
-              }
-              &.active {
-                &::after {
-                  opacity: 1;
-                }
-              }
             }
           }
         }

@@ -26,8 +26,29 @@
           &__item {
             width: 45%;
             margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
             &:last-child {
               margin-bottom: 0;
+            }
+            &::after {
+              content: '';
+              position: absolute;
+              width: 58px;
+              height: 58px;
+              background-image: url(../img/icon-ellipse__mob.svg);
+              background-position: center;
+              background-size: contain;
+              transform: translate(-50%, -50%);
+              top: 50%;
+              left: 50%;
+              transition: all 0.7s;
+              opacity: 0;
+            }
+            &.current_page_item {
+              &::after {
+                opacity: 1;
+              }
             }
             .nav-list__link {
               font-style: normal;
@@ -37,25 +58,6 @@
               transition: all 0.7s;
               position: relative;
               z-index: 2;
-              &::after {
-                content: '';
-                position: absolute;
-                width: 58px;
-                height: 58px;
-                background-image: url(../img/icon-ellipse__mob.svg);
-                background-position: center;
-                background-size: contain;
-                transform: translate(-50%, -50%);
-                top: 50%;
-                left: 50%;
-                transition: all 0.7s;
-                opacity: 0;
-              }
-              &.active {
-                &::after {
-                  opacity: 1;
-                }
-              }
             }
           }
         }
