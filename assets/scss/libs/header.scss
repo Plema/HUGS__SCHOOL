@@ -108,6 +108,7 @@
           line-height: 37px;
           position: relative;
           z-index: 2;
+          width: fit-content;
           &:not(:last-child) {
             margin-bottom: 15px;
           }

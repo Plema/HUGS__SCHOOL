@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  z-index: 5;
+  z-index: 10;
   &__top {
     background: #1b1b1b;
     &-inner {
@@ -27,7 +27,7 @@
             width: 45%;
             margin-bottom: 10px;
             position: relative;
-            z-index: 2;
+            z-index: 4;
             &:last-child {
               margin-bottom: 0;
             }
@@ -41,7 +41,7 @@
               background-size: contain;
               transform: translate(-50%, -50%);
               top: 50%;
-              left: 50%;
+              left: 20%;
               transition: all 0.7s;
               opacity: 0;
             }
@@ -65,8 +65,12 @@
     }
   }
   &__bottom {
+    position: relative;
+    z-index: 10;
     background: #000;
     &-inner {
+      position: relative;
+      z-index: 10;
       padding: 20px 0;
       .email-wrapper {
         display: flex;
@@ -122,10 +126,15 @@
         }
       }
       .footer-social {
+        position: relative;
+        z-index: 10;
         &__list {
           display: flex;
           align-items: center;
           justify-content: center;
+          position: relative;
+          z-index: 10;
+
           .social-item {
             margin: 0 4px;
             display: flex;
@@ -137,6 +146,8 @@
             border: 1px solid #959494;
             border-radius: 50%;
             transition: all 0.7s;
+            position: relative;
+            z-index: 10;
             .social-link {
               width: 100%;
               height: 100%;
@@ -144,6 +155,8 @@
               align-items: center;
               justify-content: center;
               transition: all 0.7s;
+              position: relative;
+              z-index: 10;
               .social-svg {
                 fill: #959494;
                 width: 12px;
@@ -186,6 +199,9 @@
             &__item {
               margin: 0 17.5px;
               width: fit-content;
+              &::after {
+                left: 50%;
+              }
               .nav-list__link {
                 font-style: normal;
                 font-weight: normal;
