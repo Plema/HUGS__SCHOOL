@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" data-inprogress="" />
+    <link rel="stylesheet" href="css/style.min.css" data-inprogress="" />
+    <link rel="stylesheet" href="css/schedule-page.min.css" data-inprogress="" />
+    <title>HUGS SCHOOL</title>
+    <style>
+      .main {
+        background-color: #1b1b1b;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <div class="wrapper">
+      <include src="assets/templates/header.html"></include>
+      <include src="assets/templates/pop-up.html"></include>
+      <main class="main">
+        <section class="schedule">
+          <div class="container">
+            <div class="schedule-wrapper">
+              <div class="bread-crumbs">
+                <a href="index.html" class="bread-crumbs__link">Главная</a>
+                <span>/</span>
+                <a href="javascript:void(0)" class="bread-crumbs__link">Расписание</a>
+              </div>
+              <div class="title-wrapper">
+                <h2 class="title">Расписание</h2>
+              </div>
+              <div class="select-wrapper"></div>
+              <div class="content-wrapper">
+                <ul class="course-list">
+                  <li class="course-list__item">
+                    <a href="javascript:void(0)" class="course-title__link">Курс «Фундаментальная Колористика с нуля»</a>
+                    <p class="date">12.03.2021</p>
+                    <div class="price-wrapper">
+                      <div class="price-inner">
+                        <p class="price-title">Цена:</p>
+                        <p class="price-count">12 000 р.</p>
+                      </div>
+                      <button class="button button__buy order-btn">
+                        <p>Купи сейчас со скидкой 20%</p>
+                        <svg class="icon-circle-arrow">
+                          <use href="img/sprite.svg#icon-circle-arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="course-list__item">
+                    <a href="javascript:void(0)" class="course-title__link">Мастер-класс по технике Airtouch</a>
+                    <p class="date">24.03.2021</p>
+                    <div class="price-wrapper">
+                      <div class="price-inner">
+                        <p class="price-title">Цена:</p>
+                        <p class="price-count">12 000 р.</p>
+                      </div>
+                      <button class="button button__buy order-btn">
+                        <p>Купи сейчас со скидкой 20%</p>
+                        <svg class="icon-circle-arrow">
+                          <use href="img/sprite.svg#icon-circle-arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="course-list__item">
+                    <a href="javascript:void(0)" class="course-title__link">Мастер-класс по технике Airtouch</a>
+                    <p class="date">30.03.2021</p>
+                    <div class="price-wrapper">
+                      <div class="price-inner">
+                        <p class="price-title">Цена:</p>
+                        <p class="price-count">12 000 р.</p>
+                      </div>
+                      <button class="button button__buy order-btn">
+                        <p>Купи сейчас со скидкой 20%</p>
+                        <svg class="icon-circle-arrow">
+                          <use href="img/sprite.svg#icon-circle-arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <include src="assets/templates/footer.html"></include>
+    </div>
+
+    <!-- script -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.matchHeight.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <script src="js/header-burger.min.js"></script>
+    <script src="js/sticky-header.min.js" type="module"></script>
+    <script src="js/index.min.js"></script>
+  </body>
+</html>
