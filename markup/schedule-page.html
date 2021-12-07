@@ -125,7 +125,25 @@
               <div class="title-wrapper">
                 <h2 class="title">Расписание</h2>
               </div>
-              <div class="select-wrapper"></div>
+
+              <div class="select-wrapper">
+                <div class="select-year__wrapper">
+                  <select class="select select-year" name="year">
+                    <option disabled="">Год</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                  </select>
+                </div>
+                <div class="select-moon__wrapper">
+                  <select class="select select-moon" name="moon">
+                    <option disabled="">Месяц</option>
+                    <option value="Январь">Январь</option>
+                    <option value="Февраль">Февраль</option>
+                  </select>
+                </div>
+                <button type="submit" class="button-search"><p>Искать</p></button>
+              </div>
+
               <div class="content-wrapper">
                 <ul class="course-list">
                   <li class="course-list__item">
