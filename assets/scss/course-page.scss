@@ -38,6 +38,9 @@
       position: relative;
       z-index: 3;
       margin-bottom: 20px;
+      .text-wrapper {
+        margin-bottom: 42px;
+      }
       .description-text {
         position: relative;
         z-index: 2;
@@ -45,7 +48,10 @@
         font-weight: normal;
         font-size: 18px;
         line-height: 22px;
-        margin-bottom: 42px;
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
       .description-img {
         position: relative;
@@ -454,11 +460,16 @@
       .description-wrapper {
         display: flex;
         justify-content: space-between;
-        .description-text {
+        .text-wrapper {
           width: 50%;
-          margin-bottom: 0;
+        }
+        .description-text {
+          margin-bottom: 10;
           font-size: 20px;
           line-height: 23px;
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
         .description-img {
           width: 42%;
@@ -644,6 +655,10 @@
         margin-bottom: 45px;
         .description-img {
           display: none;
+        }
+        .text-wrapper {
+          width: 100%;
+          max-width: 667px;
         }
         .description-text {
           width: 100%;
